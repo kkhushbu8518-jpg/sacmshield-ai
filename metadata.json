@@ -1,0 +1,6 @@
+{
+  "name": "ScamShield AI – Your Digital Safety Guardian",
+  "description": "AI-powered cybersecurity dashboard protecting users from SMS/email scams, phishing links, fraudulent phone callers, and risky payment transfers.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

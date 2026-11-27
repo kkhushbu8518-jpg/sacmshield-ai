@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #070d1c;
+    color: #eef2ff;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Threat-Adaptive Theme Tokens */
+[data-threat-theme="neutral"] {
+  --theme-bg: #070d1c;
+  --theme-surface: #0d162d;
+  --theme-surface-elevated: #111d3a;
+  --theme-border: rgba(56, 189, 248, 0.16);
+  --theme-accent: #2563eb;
+  --theme-accent-soft: rgba(37, 99, 235, 0.14);
+  --theme-highlight: #10b981;
+  --theme-glow: rgba(37, 99, 235, 0.14);
+}
+
+[data-threat-theme="safe"] {
+  --theme-bg: #041510;
+  --theme-surface: #072219;
+  --theme-surface-elevated: #0a2d21;
+  --theme-border: rgba(16, 185, 129, 0.34);
+  --theme-accent: #10b981;
+  --theme-accent-soft: rgba(16, 185, 129, 0.16);
+  --theme-highlight: #34d399;
+  --theme-glow: rgba(16, 185, 129, 0.22);
+}
+
+[data-threat-theme="suspicious"] {
+  --theme-bg: #181105;
+  --theme-surface: #241a08;
+  --theme-surface-elevated: #2e220b;
+  --theme-border: rgba(245, 158, 11, 0.34);
+  --theme-accent: #f59e0b;
+  --theme-accent-soft: rgba(245, 158, 11, 0.16);
+  --theme-highlight: #fbbf24;
+  --theme-glow: rgba(245, 158, 11, 0.18);
+}
+
+[data-threat-theme="danger"] {
+  --theme-bg: #1a060b;
+  --theme-surface: #290a12;
+  --theme-surface-elevated: #360e18;
+  --theme-border: rgba(239, 68, 68, 0.42);
+  --theme-accent: #ef4444;
+  --theme-accent-soft: rgba(239, 68, 68, 0.18);
+  --theme-highlight: #f87171;
+  --theme-glow: rgba(239, 68, 68, 0.24);
+}
+
+/* Official Google Sign-In Material Button Styling */
+.gsi-material-button {
+  user-select: none;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #0f172a;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  height: 40px;
+  padding: 0 14px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms ease, box-shadow 150ms ease;
+  white-space: nowrap;
+}
+
+.gsi-material-button:hover {
+  background-color: #f8fafc;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+}
+
+.gsi-material-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gsi-material-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gsi-material-button-icon {
+  height: 18px;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
